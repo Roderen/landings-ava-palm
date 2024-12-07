@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  <style>
+    body {
+      min-height: 100vh;
+    }
+
+    .section-intro {
+      margin-top: 50px;
+    }
+
+    .intro__video {
+      margin-right: 30px;
+    }
+
+    .intro__bottom-right__line {
+      align-items: flex-start;
+      margin-top: 50px;
+    }
+
+    .intro__bottom-right__line div {
+      display: none;
+    }
+
+    .intro__bottom-right__info p {
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    .intro__bottom-right__more {
+      margin-bottom: 0;
+      font-size: 42px;
+    }
+
+    .intro__bottom-bg {
+      position: relative;
+    }
+
+    .intro-404 {
+      font-size: 320px;
+      font-family: 'Mak-Regular';
+      position: absolute;
+      right: 130px;
+      top: 30px;
+      z-index: 0;
+      opacity: .4;
+      pointer-events: none;
+    }
+
+    @media screen and (max-width: 1024px) {
+      .intro__bottom-right {
+        margin-left: 0;
+      }
+
+      .intro__top-line {
+        width: 250px;
+      }
+
+      .intro__bottom-bg {
+        display: block;
+        margin-right: 0;
+      }
+
+      .intro__bottom-bg img {
+        display: none;
+      }
+
+      .intro-404 {
+        z-index: -1;
+        font-size: 230px;
+        right: 20px;
+        opacity: .1;
+      }
+
+      .intro__video {
+        width: 600px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .intro__video {
+        width: 100%;
+        margin-right: 0;
+      }
+
+      .intro__bottom-right__info {
+        display: block;
+      }
+
+      .intro__bottom-right__info p {
+        max-width: 100%;
+      }
+
+      .intro__bottom-right__line {
+        margin-top: 30px;
+      }
+
+      .intro-404 {
+        font-size: 340px;
+        top: -50px;
+      }
+    }
+
+    @media screen and (max-width: 560px) {
+      .intro-404 {
+        font-size: 270px;
+      }
+    }
+
+    @media screen and (max-width: 430px) {
+      .intro-404 {
+        font-size: 200px;
+      }
+
+      .intro__bottom-right__info p {
+        font-size: 26px;
+      }
+
+      .intro__bottom-right__more {
+        font-size: 36px;
+      }
+
+      .intro__video {
+        height: 300px;
+      }
+    }
+
+    @media screen and (max-width: 414px) {
+      .intro-404 {
+        font-size: 190px;
+        top: 0;
+      }
+    }
+
+    @media screen and (max-width: 375px) {
+      .intro__top-title {
+        font-size: 50px;
+      }
+
+      .intro-404 {
+        font-size: 160px;
+      }
+
+      .intro__bottom-right__info p {
+        font-size: 23px;
+      }
+    }
+
+    @media screen and (max-width: 360px) {
+      .intro-404 {
+        font-size: 150px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Intro -->
+  <section class="section-intro section-big-container">
+
+    <div class="intro">
+      <div class="intro__top container">
+        <div class="intro__top-title">AVA AT PALM</div>
+        <div class="intro__top-line"></div>
+      </div>
+      <div class="intro__bottom">
+        <div class="intro__video">
+          <video muted="" autoplay="" playsinline="" preload="metadata">
+            <source
+              src="https://www.dl.dropboxusercontent.com/s/lg0pm9hfi5316ij/Omniyat%20AVA%20at%20Palm%20Jumeirah.mp4?dl=0#t=0.001"
+              type="video/mp4">
+          </video>
+        </div>
+
+        <div class="intro__bottom-right">
+          <div class="intro__bottom-right__top">
+            <div class="intro__under-title">
+              <div class="intro__bottom-title">
+                <div class="intro__bottom-line"></div>
+                JUMEIRAH
+              </div>
+
+              <div class="intro__bottom-right__info">
+                <p>Извините, этой страницы не существует</p>
+                <div class="intro__bottom-right__line">
+                  <div></div>
+                  <a href="https://ava-palm.ae/ru/" class="intro__bottom-right__more more-btn popup-button">на главную</a>
+                </div>
+              </div>
+            </div>
+            <div class="intro__bottom-bg">
+              <img src="images/intro/bg.jpg" width="640" height="340" loading="lazy">
+              <div class="intro-404">404</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

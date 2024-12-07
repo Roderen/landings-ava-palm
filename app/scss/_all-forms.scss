@@ -1,0 +1,25 @@
+.form-container {
+  position: relative;
+}
+
+.form-input {
+  border: none;
+  outline: none;
+
+  &:focus~.form-label,
+  &:valid~.form-label {
+    transform: translateY(-100%) scale(0.7);
+  }
+}
+
+.form-label {
+  transition: 0.3s;
+  pointer-events: none;
+  transform-origin: left;
+}
+
+.form-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

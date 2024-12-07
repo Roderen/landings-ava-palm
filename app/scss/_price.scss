@@ -1,0 +1,174 @@
+.section-price {
+  margin-top: 200px;
+
+  @include _560 {
+    margin-top: 100px;
+  }
+}
+
+.price {
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: -200px;
+    right: -400px;
+    width: 700px;
+    height: 700px;
+    z-index: -1;
+
+    @include _768 {
+      right: inherit;
+      left: -200px;
+    }
+
+    @include _430 {
+      left: -300px;
+    }
+  }
+}
+
+.price__title {
+  text-align: center;
+  color: #4e4e4e;
+  font-size: 100px;
+  font-family: 'Mak-Regular';
+
+  @include _768 {
+    font-size: 72px;
+  }
+
+  @include _560 {
+    font-size: 58px;
+  }
+}
+
+.price__descr {
+  text-align: center;
+  max-width: 715px;
+  margin: 0 auto;
+  margin-top: 20px;
+
+  p {
+    color: #4e4e4e;
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.50;
+    font-weight: 400;
+  }
+}
+
+.price__brochure {
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+
+  @include _768 {
+    margin-top: 30px;
+  }
+}
+
+.price__brochure-inner {
+  background-color: #fff;
+  box-shadow: 0px 20px 80px 0px rgba(0, 0, 0, 0.1);
+  max-width: 530px;
+  padding: 40px 20px;
+
+  @include _768 {
+    margin: 0 auto;
+  }
+}
+
+.price__brochure-title {
+  text-align: center;
+  color: #b17c7e;
+  font-size: 45px;
+  font-family: 'Mak-Bold';
+
+  @include _560 {
+    font-size: 38px;
+  }
+}
+
+.price__form {
+  margin-top: 20px;
+}
+
+.price__form-container {
+  margin-top: 20px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.price__form-input {
+  width: calc(100% - 42px);
+  padding: 26px 20px 10px;
+  border: 1px solid transparent;
+  border-bottom: 1px solid rgb(191, 191, 191);
+}
+
+.price__form-label {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  font-family: 'Mak-Regular';
+  font-size: 16px;
+  color: #4f4f4f;
+  opacity: .5;
+}
+
+.price__form-button {
+  margin-top: 25px;
+  min-width: 300px;
+  padding: 15px 10px;
+  color: #ffffff;
+  background-color: #b17c7e;
+  border-radius: 40px;
+  font-size: 18px;
+  font-family: 'Noto Sans', sans-serif;
+
+  @include _430 {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+.price__brochure-logo {
+  display: none;
+  width: 180px;
+  margin: 0 auto;
+  margin-top: 40px;
+
+  @include _768 {
+    display: block;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.price__brochure-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: rotate(7deg);
+  object-fit: cover;
+  z-index: -1;
+
+  @include _768 {
+    display: none;
+  }
+
+  @include _430 {
+    display: block;
+    position: unset;
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

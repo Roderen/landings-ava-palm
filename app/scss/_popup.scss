@@ -1,0 +1,192 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Graphik';
+
+  &.active {
+    display: flex;
+
+    .popup__inner {
+      display: block;
+      animation-name: popupInnerShow;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+.popup-close {
+  cursor: pointer;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 40px;
+  right: 40px;
+
+  @include _430 {
+    right: 20px;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+  }
+
+  &:before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}
+
+.popup__inner {
+  display: none;
+  opacity: 0;
+  background-color: #fff;
+  width: 560px;
+}
+
+@-webkit-keyframes popupInnerShow {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popupInnerShow {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.popup-container {
+  padding: 40px 45px;
+
+  @include _375 {
+    padding: 40px 25px;
+  }
+}
+
+.popup__title {
+  color: #4f4f4f;
+  font-size: 40px;
+  font-family: 'Mak-Bold';
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.popup__subtitle {
+  margin-top: 20px;
+  color: #4f4f4f;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.popup__form {
+  margin-top: 25px;
+
+  &.thanks {
+    &.popup__form {
+      display: none;
+    }
+
+    &~.popup__thanks {
+      display: block;
+    }
+  }
+}
+
+.popup__form-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.popup__form-input {
+  font-family: 'Mak-Regular';
+  outline: none;
+  font-size: 16px;
+  color: #000;
+  border: 1px solid #c9c9c9;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 25px 20px 15px 15px;
+  width: calc(100% - 37px);
+}
+
+.popup__form-label {
+  font-family: 'Mak-Regular';
+  font-size: 16px;
+  color: #373737;
+  opacity: .5;
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  transition: 0.3s;
+  pointer-events: none;
+  transform-origin: left;
+}
+
+.popup__form-button {
+  font-family: 'Noto Sans', sans-serif;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #b17c7e;
+  border-radius: 35px;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 18px 10px;
+  width: 100%;
+  border: none;
+  text-transform: uppercase;
+}
+
+.popup__free {
+  color: rgba(79, 79, 79, 0.5);
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.popup__thanks {
+  display: none;
+  width: 60%;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #62c584;
+  color: #fff;
+  font-family: 'Mak-Regular';
+  font-size: 18px;
+}

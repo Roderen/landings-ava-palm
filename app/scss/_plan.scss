@@ -1,0 +1,101 @@
+.section-plan {
+  margin-top: 200px;
+
+  @include _1024 {
+    margin-top: 100px;
+  }
+}
+
+.plan {}
+
+.plan__title {
+  text-align: center;
+  color: #4e4e4e;
+  font-size: 100px;
+  font-family: 'Mak-Regular';
+  text-transform: uppercase;
+
+  @include _768 {
+    font-size: 72px;
+  }
+
+  @include _560 {
+    font-size: 54px;
+  }
+
+  @include _430 {
+    font-size: 44px;
+  }
+}
+
+.plan__list {
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  @include _1024 {
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  @include _560 {
+    max-width: 100%;
+  }
+
+  div {
+    text-align: center;
+    width: 195px;
+    height: 195px;
+    border: 1px solid #cecdcf;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+    @include _430 {
+      width: 150px;
+      height: 150px;
+    }
+
+    @include _375 {
+      width: 130px;
+      height: 130px;
+    }
+
+    @include _320 {
+      width: 110px;
+      height: 110px;
+    }
+
+    &:last-child {
+      @include _320 {
+        width: 170px;
+        height: 170px;
+      }
+    }
+
+    span {
+      color: #b17c7e;
+      font-size: 50px;
+      font-family: 'Mak-Regular';
+      font-size: 38px;
+    }
+
+    p {
+      color: #4e4e4e;
+      font-size: 16px;
+      font-family: 'Noto Sans', sans-serif;
+      font-weight: 400;
+
+      @include _430 {
+        font-size: 14px;
+      }
+    }
+  }
+}

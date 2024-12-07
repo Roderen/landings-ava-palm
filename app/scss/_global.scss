@@ -1,0 +1,260 @@
+html {
+  overflow-x: hidden;
+
+  &.active {
+    overflow: hidden;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  background-color: #fcfbfb;
+  position: relative;
+
+  .svg {
+    position: absolute;
+    top: -300px;
+    right: -300px;
+    width: 50%;
+    height: 50%;
+    pointer-events: none;
+
+    @include _1024 {
+      right: 0;
+    }
+  }
+
+  &.active {
+    overflow: hidden;
+  }
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-big-container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.main {
+  overflow: hidden;
+  position: relative;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+label {
+  will-change: transform;
+}
+
+// Invalid input start ==============
+.invalid-input {
+  border: 1px solid red !important;
+
+  & + .form-label {
+    left: 15px;
+  }
+}
+
+.invalid-input-non-animation {
+  border: 1px solid red;
+}
+
+// Invalid input end ==============
+
+.form-label-valid {
+  transform: translateY(-100%) scale(0.7);
+}
+
+
+// Fancybox start ==================
+.fancybox__container {
+  z-index: 10000;
+}
+
+.fancybox__thumbs,
+.fancybox__toolbar__items--left,
+.fancybox__button--slideshow,
+.fancybox__button--fullscreen,
+.fancybox__button--thumbs {
+  display: none;
+}
+
+.fancybox__backdrop {
+  background: #fff;
+}
+
+.fancybox__toolbar {
+  background: none;
+}
+
+.carousel__button svg,
+.carousel__button svg path {
+  stroke: #000;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+// Fancybox end ==================
+
+
+// Form sending animation start ==================
+form.sending {
+  pointer-events: none;
+
+  button {
+    position: relative;
+    pointer-events: none;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(to left, #1a1a1a, #fff);
+      animation: waitFormSending 0.5s linear infinite alternate;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(to right, #1a1a1a, #fff);
+      animation: waitFormSending 0.5s linear infinite alternate;
+    }
+  }
+}
+
+@keyframes waitFormSending {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+// Form sending animation end ==================
+
+
+// Form succsess start ==================
+.form__succsess {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: none;
+}
+
+.form__succsess-inner {
+  position: relative;
+  width: 290px;
+  background-color: #fff;
+  padding: 20px 30px;
+  height: 160px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.form__succsess-close {
+  cursor: pointer;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 35%;
+    right: 15%;
+    width: 15px;
+    height: 1px;
+    background-color: #000;
+  }
+
+  &:before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}
+
+.form__succsess-text {
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Lora';
+  font-weight: 400;
+  color: #000;
+}
+
+// Form succsess end =================
+
+
+// Call tracking
+.ct-widget__call-us .ct-widget__button {
+  //код меняющий стиль кнопки
+  background: #c4a64e !important;
+
+}
+
+.ct-widget__call-us .ct-widget__clipboard {
+  //выпадашка с номером телефона для десктоп
+  background: #bb9a3b !important;
+}
+
+.ct-widget__call-us .ct-widget__clipboard:before {
+  border-top-color: #bb9a3b !important;
+}

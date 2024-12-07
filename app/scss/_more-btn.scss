@@ -1,0 +1,29 @@
+.more-btn {
+  position: relative;
+  color: #b17c7e;
+  font-size: 35px;
+  font-family: 'Mak-Regular';
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 100%;
+    max-width: 0;
+    height: 1px;
+    background-color: #b17c7e;
+    transition: max-width .3s;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .more-btn:hover.more-btn:before {
+    max-width: 100%;
+    right: auto;
+    left: 0;
+  }
+}

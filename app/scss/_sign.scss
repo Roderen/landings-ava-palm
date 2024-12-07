@@ -1,0 +1,184 @@
+.section-sign {
+  margin-top: 120px;
+
+  .container {
+    @include _1024 {
+      padding: 0;
+    }
+
+    @include _768 {
+      padding: 0 80px;
+    }
+
+    @include _560 {
+      padding: 0 15px;
+    }
+  }
+}
+
+.sign {
+  background-color: #b17c7e;
+  padding: 40px 40px 40px 40px;
+
+  @include _768 {
+    padding: 40px;
+  }
+
+  @include _560 {
+    padding: 40px 20px;
+  }
+}
+
+.sign__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @include _768 {
+    flex-direction: column;
+  }
+}
+
+.sign__top-title {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  font-size: 66px;
+  font-family: 'Mak-Regular';
+  line-height: 1.2;
+
+  @include _1024 {
+    font-size: 46px;
+  }
+
+  @include _768 {
+    font-size: 52px;
+    max-width: 400px;
+    margin-right: 0;
+  }
+
+  @include _560 {
+    max-width: 100%;
+    font-size: 46px;
+  }
+
+  @include _320 {
+    font-size: 30px;
+  }
+}
+
+.sign__top-info {
+  max-width: 390px;
+
+  @include _768 {
+    margin-top: 20px;
+  }
+
+  @include _560 {
+    max-width: 100%;
+  }
+
+  img {
+    object-fit: cover;
+
+    @include _768 {
+      display: none;
+    }
+  }
+
+  p {
+    margin-top: 35px;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.55;
+    font-weight: 400;
+    opacity: 0.7;
+
+    @include _768 {
+      margin-top: 0;
+    }
+
+    @include _320 {
+      font-size: 15px;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+  }
+}
+
+.sign__form {
+  margin-top: 40px;
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+
+  @include _768 {
+    flex-direction: column;
+    align-items: stretch;
+    width: 80%;
+  }
+
+  @include _430 {
+    width: 100%;
+  }
+
+  input {
+    width: calc(30% - 22px);
+    font-family: 'Mak-Regular';
+    font-size: 16px;
+    color: rgb(9, 20, 53);
+    background-color: #fff;
+    border: 1px solid transparent;
+    padding: 15px 10px;
+    outline: none;
+
+    @include _768 {
+      width: calc(100% - 22px);
+    }
+
+    &::placeholder {
+      opacity: .8;
+    }
+  }
+
+  button {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 25px;
+    padding: 10px 10px;
+    width: calc(39% - 20px);
+
+    @include _768 {
+      width: 70%;
+    }
+
+    @include _430 {
+      width: 100%;
+    }
+  }
+}
+
+.sign__zero {
+  margin-top: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.sign__logo-mobile {
+  object-fit: cover;
+  margin-top: 20px;
+  display: none;
+
+  @include _768 {
+    display: block;
+  }
+}
